@@ -188,7 +188,7 @@ footer{
 
     .navigation .logo{
         margin: 0px;
-        padding: 0px;
+        padding: 8px;
         text-align: center;
         font-size: 18px;
         border-bottom: 1px solid #333333;
@@ -205,6 +205,7 @@ footer{
         width: 100%;
         text-align: center;
         border-bottom: 1px solid #333333;
+        padding: 8px;
     }
 
     .navigation .link li a {
@@ -231,6 +232,10 @@ footer{
         text-align: center;
         margin: 20px 0px 40px 0px;
         padding: 0px;
+    }
+
+    .container aside{
+        display: none;
     }
 
     /* Main content */
