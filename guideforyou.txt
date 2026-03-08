@@ -1,0 +1,168 @@
+This guide will help you manage your work on the Platform-based repository. It covers how to grab just the files you need, how to start your own branch, and how to save your progress.
+
+1. Cloning Only a Single Branch
+
+If you only want the files from a specific branch (like lab2-task) without downloading the entire repository history, use this command:
+
+
+
+git clone --single-branch --branch lab2-task https://github.com/Crsrll/Platform-based.git
+
+
+
+--single-branch: Tells Git to only download one branch.
+
+--branch lab2-task: Specifies which branch to grab.
+
+URL: The link to your repository.[1][2]
+
+
+
+2. Creating a New Branch
+
+Before you start working, it is best practice to create a new branch.[3] This keeps the original files safe while you make changes.[4]
+
+Open your terminal inside the project folder.
+
+Create and switch to your new branch:
+
+
+
+git checkout -b lab2-yourname
+
+
+
+
+(Replace lab2-yourname with something unique like your name or the task number).
+
+
+
+
+Verify you are on the new branch:
+
+
+
+git branch
+
+
+
+
+The branch with the asterisk (*) is the one you are currently using.
+
+
+
+
+3. Pushing Files to an Existing Branch
+
+Once you have edited your code or added new files, follow these four steps to "upload" them to GitHub.
+
+Step 1: Stage your files
+
+Tell Git which files you want to save.[4] To save everything:
+
+
+
+git add . (to save everything)
+git add index.html (to save specific files)
+
+
+
+
+Step 2: Commit your changes
+
+Save a "snapshot" of your work with a short description:
+
+
+
+
+git commit -m "Finished lab 2 tasks" (gives detail of what you did)
+
+
+
+Step 4: Push to GitHub[1]
+
+If it's the first time pushing this branch:
+
+
+
+git push -u origin lab2-yourname
+
+
+
+If you've pushed before, just use:
+
+git push
+
+
+
+Quick Cheat Sheet
+Goal	Command
+Switch to a different branch	git checkout branch-name
+Update local files from GitHub	git pull origin branch-name
+Check which branch you are on	git branch
+Undo local changes to a file	git restore filename
+
+Tip for Classmates: Always run git pull before you start working to make sure you have the most updated version of the files!
+
+
+
+If your classmates didn't use the git clone command but already have a folder with files on their computer (or they just started a new project), they need to manually "link" their local folder to your GitHub repository.
+
+Here is how they find the link and connect their project using git remote.
+
+1. Where to get the link?
+
+If they don't have the link yet, they should go to your GitHub repository page:
+
+Click the green "<> Code" button.
+
+Copy the URL under the HTTPS tab.
+
+For your repo, it is: https://github.com/Crsrll/Platform-based.git
+
+2. How to link a local folder (If they didn't clone)
+
+If they have a folder on their computer and want to connect it to your GitHub repo for the first time, they should run these commands inside that folder:
+
+ 
+# 1. Initialize the folder as a Git repository
+git init
+
+# 2. Connect the folder to your GitHub repo
+# (Replace the URL if it's different)
+git remote add origin https://github.com/Crsrll/Platform-based.git
+
+# 3. Verify that it worked
+git remote -v
+
+[3][4][6][7][8][9]* git remote add origin [URL]: This creates a shortcut named origin that points to your GitHub link.
+
+3. How to check the link (If they forgot it)
+
+If they are already working in a Git-enabled folder but aren't sure which repository it's connected to, they can run:
+git remote -v
+
+The output will look like this:
+
+origin  https://github.com/Crsrll/Platform-based.git (fetch)
+origin  https://github.com/Crsrll/Platform-based.git (push)
+[10]
+
+4. Helpful "First Time" Commands
+
+To push their work for the first time after linking:
+
+ 
+git add .
+git commit -m "My first commit"
+git push -u origin main
+
+[11]
+
+Summary for Classmates:
+
+git remote add origin [URL]: Use this if you started a folder locally and need to connect it to GitHub.[2][3][7][8][11]
+
+git remote -v: Use this to check if you are connected to the right repository.[3][4][6][8][12][13]
+
+git remote set-url origin [URL]: Use this if you accidentally connected to the wrong link and need to fix it.
