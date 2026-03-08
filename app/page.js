@@ -6,7 +6,7 @@ export default function Home(){
   const [message, setMessage] = useState("");
 
   async function fetchMessage() {
-    const res = await fetch(`/api/message?name=${name}`);
+    const res = await fetch(`/api/hello?name=${name}`);
     const data = await res.json()
     setMessage(data.message);
   }
