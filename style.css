@@ -55,9 +55,9 @@ body{
     object-fit: fill;
     height: 100%;
     border-radius: 20%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 100%;
-  filter: brightness(1.1) contrast(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    filter: brightness(1.1) contrast(1.05);
 }
 
 .container main {
