@@ -11,6 +11,13 @@ export default function Home(){
     setMessage(data.message);
   }
 
+  function handleKeyPress(e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      fetchMessage();
+    }
+  }
+
   return(
     <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-400 to-blue-400 flex items-center justify-center p-4">
       <div className="bg-white p-10 rounded-2xl shadow-2xl max-w-md w-full">
@@ -26,6 +33,7 @@ export default function Home(){
             placeholder="Enter your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            onKeyPress={handleKeyPress}
             className="w-full border-2 border-gray-200 rounded-xl py-3 px-4 text-black bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent focus:bg-white transition duration-200"
           />
         </form>
