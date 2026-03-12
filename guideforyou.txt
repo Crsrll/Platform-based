@@ -40,7 +40,11 @@ git push -u origin lab3-task (pushing your edited files into the github)
 
 Tip for Classmates: Always run git pull before you start working to make sure you have the most updated version of the files!
 
+if nagchange imong cm sa other file while nagchange pd ka sa imong file. make sure nga magcommit ka una before ka mo pull para dili mawala imong giedit while nagkuha ka sa new information.
 
+git add .
+git commit -m "Updated guideforyou"
+git pull
 
 
 
