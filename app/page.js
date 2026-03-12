@@ -17,13 +17,13 @@ export default function Home(){
         <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">
           Message Fetcher
         </h1>
-        <form>
+        <form className="mb-4">
           <input
             type="text"
             placeholder="Enter your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border border-gray-300 rounded-lg py-3 px-4 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </form>
         <button 
