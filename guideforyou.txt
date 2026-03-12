@@ -1,108 +1,127 @@
-This guide will help you manage your work on the Platform-based repository. It covers how to grab just the files you need, how to start your own branch, and how to save your progress.
+git clone --single-branch --branch lab3-task https://github.com/Crsrll/Platform-based.git
 
-1. Cloning Only a Single Branch
+kani for cloning the single branch
+then pagmakuha na nimo ang clone sa imong vscode
+try "npm run dev"
+ - if moingon siya na no next.js, do "npm install" then morun na daun na
 
-If you only want the files from a specific branch (like lab2-task) without downloading the entire repository history, use this command:
-
-
-
-git clone --single-branch --branch lab2-task https://github.com/Crsrll/Platform-based.git
-
-
-
+details: 
 --single-branch: Tells Git to only download one branch.
 
 --branch lab2-task: Specifies which branch to grab.
 
 URL: The link to your repository.[1][2]
 
+git remote -v (kani kay icheck niya kung naa ka sa right github nga repository)
 
+origin  https://github.com/Crsrll/Platform-based.git (fetch)
+origin  https://github.com/Crsrll/Platform-based.git (push)
 
-2. Creating a New Branch
+- if mogawas na, you're in the right repo
 
-Before you start working, it is best practice to create a new branch.[3] This keeps the original files safe while you make changes.[4]
+git branch (kani icheck if naa ka sa right branch because naay possibility na lahi imong gieditan)
 
-Open your terminal inside the project folder.
+* lab3-task
+  master
 
-Create and switch to your new branch:
+kanang asterisk it means naa ka diha nga sulod og kana imong editan
 
-
-
-git checkout -b lab2-yourname
-
-
-
-
-(Replace lab2-yourname with something unique like your name or the task number).
-
-
-
-
-Verify you are on the new branch:
-
-
-
-git branch
-
-
-
-
-The branch with the asterisk (*) is the one you are currently using.
-
-
-
-
-3. Pushing Files to an Existing Branch
-
-Once you have edited your code or added new files, follow these four steps to "upload" them to GitHub.
-
-Step 1: Stage your files
-
-Tell Git which files you want to save.[4] To save everything:
-
-
+then if magpush naka kani moi format
 
 git add . (to save everything)
-git add index.html (to save specific files)
+or git add index.html (to save specific files)
+
+git commit -m "Finished lab 2 tasks" (gives a short message of what you did)
+
+git push -u origin lab3-task (pushing your edited files into the github)
 
 
-
-
-Step 2: Commit your changes
-
-Save a "snapshot" of your work with a short description:
-
-
-
-
-git commit -m "Finished lab 2 tasks" (gives detail of what you did)
-
-
-
-Step 4: Push to GitHub[1]
-
-If it's the first time pushing this branch:
-
-
-
-git push -u origin lab2-yourname
-
-
-
-If you've pushed before, just use:
-
-git push
-
-
-
-Quick Cheat Sheet
-Goal	Command
-Switch to a different branch	git checkout branch-name
-Update local files from GitHub	git pull origin branch-name
-Check which branch you are on	git branch
-Undo local changes to a file	git restore filename
+(git pull) Always run this before mag edit mo. If naay giedit imong cm daun gusto nimo kwaon iyang edits
 
 Tip for Classmates: Always run git pull before you start working to make sure you have the most updated version of the files!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
