@@ -36,8 +36,8 @@ export default function Home(){
           {message ? "Hide Message" : "Fetch Message"}
         </button>
         {message && (
-          <div className="mt-8 p-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl border-l-4 border-purple-500 shadow-md">
-            <p className="text-gray-800 font-semibold text-center">{message}</p>
+          <div className="mt-8 p-6 bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl border-2 border-purple-400 shadow-lg">
+            <p className="text-purple-900 font-bold text-center text-lg">{message}</p>
           </div>
         )}
       </div>
