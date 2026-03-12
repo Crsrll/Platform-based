@@ -45,7 +45,9 @@ export default function Home(){
         </button>
         {message && (
           <div className="mt-8 p-6 bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl border-2 border-purple-400 shadow-lg">
-            <p className="text-purple-900 font-bold text-center text-lg">{message}</p>
+            <p className="text-purple-900 font-bold text-center text-lg break-words whitespace-normal">
+              {message}
+            </p>
           </div>
         )}
       </div>
